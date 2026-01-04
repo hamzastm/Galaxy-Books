@@ -1,0 +1,368 @@
+*
+{
+    font-family: Cairo;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+header
+{
+    background: url(assets2/bg.png);
+    background-size:cover;
+    background-position: bottom;
+}
+
+
+.wrapper
+{
+    backdrop-filter: blur(10px);
+    height: 30rem;
+    width: auto;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.Welcome
+{
+    font-size: 44px;
+    font-weight: 700;
+    color: var(--maincolor2);
+    
+}
+
+.Welcome-dis
+{
+    font-size: 30px;
+    font-weight: 400;
+    min-width: 600px;
+    color: var(--maincolor2);
+}
+
+.Welcome-dis2
+{
+    font-size: 20px;
+    font-weight: 400;
+    min-width: 600px;
+    color: var(--maincolor2); 
+}
+
+.discover-btn
+{
+    padding: 20px;
+    border: 1px solid var(--lightcolor2);
+    border-radius: 50px;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--lightcolor2);
+    transition: color .4s , background-color .4s;
+    cursor: pointer;
+    max-width: 200px;
+    text-align: center;
+}
+
+.discover-btn:hover
+{
+   color: black;
+   background-color: var(--lightcolor2); 
+}
+
+.bar-wrapper
+{
+    position: sticky;
+    top: .1px;
+    z-index: 1000;
+    transition: all .3s ease;
+}
+
+.bar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--lightcolor);
+    padding: 8px 10px;
+    box-shadow: 0 0 6px var(--maincolor);
+    text-wrap: nowrap;
+    text-decoration: none;
+    flex-wrap: wrap;
+}
+
+
+
+.left
+{
+    color: var(--maincolor2);    
+}
+
+.mid
+{
+    display: flex;
+    align-items: center;
+}
+
+.cart-btn
+{
+    display: flex;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    border: 0;
+    background-color: transparent;
+    transition: all .3s ease;
+}
+
+.cart-btn:hover{
+    background-color: var(--lightcolor2);
+    box-shadow: 0 0 10px var(--lightcolor2);
+}
+
+.cart-items
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top:3px;
+    right:3px;
+    background-color: red;
+    border-radius: 50%;
+    font-size: 10px;
+    width: 17px;
+    height: 17px;
+    font-weight: 900;
+    color: var(--lightcolor);
+    box-shadow: 0 0  5px 1px white;
+}
+
+.mid .search-wraper
+{
+    min-width: 7rem;
+    position: relative;
+}
+
+.mid .search
+{
+    position: relative;
+    margin-inline: 2rem;
+}
+
+.mid .search input
+{
+    min-height: 50px;
+    border-radius: 250px;
+    border: solid var(--maincolor);
+    background-color: #FEFCFB;
+    padding: 0 20px;
+    outline: none;
+    font-size: 16px;
+    box-shadow: inset 0 0 2px var(--mainhover);
+}
+
+.mid .search .search-btn
+{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 3.9px;
+    right: 4px;
+    border: none;
+    padding:8px;
+    border-radius: 40px;
+    background-color: var(--maincolor);
+    transition: background-color .3s ,border-radius .3s ease-in; 
+    cursor: pointer;
+}
+
+.mid .search .search-btn:hover
+{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: var(--mainhover);
+}
+
+.right
+{
+    display: flex;
+    padding-right:20px;
+    flex-wrap: wrap;
+}
+
+.right .nav-btns
+{
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    border:transparent;
+    font-size: 18px;
+    padding: 0 1rem;
+    cursor: pointer;
+    transition: color .4s;
+}
+
+.right .nav-btns:hover
+{
+    color: var(--mainhover);
+}
+
+.right .nav-btns::before , .right .nav-btns::after
+{
+    content: " ";
+    background-color: var(--maincolor2);
+    padding: 6px 2px;
+    border-radius: 5px;
+    margin-top: 4px;
+    transition: all .4s;
+}
+
+.right .nav-btns:hover::before , .right .nav-btns:hover::after
+{
+    background-color: var(--lightcolor2);
+    transform: scaleY(2);
+}
+
+.right .nav-btns .nav-btns-text
+{
+    color: var(--maincolor2);
+    text-decoration: none;
+}
+
+.Category
+{
+    position: relative;
+}
+
+.cati-arrow
+{
+    width: 35px;
+    transition: transform .2s;
+}
+.Category:hover .cati-arrow
+{
+    transform: rotate(90deg);
+}
+
+.genres
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 40px;
+    left: -72px;
+    background-color: var(--lightcolor2);
+    color: var(--lightcolor);
+    border-radius: 30px;
+    padding: 20px;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0;
+    max-height: 240px;
+    width: max-content;
+    text-wrap: nowrap;
+    box-shadow: 0 0 10px var(--maincolor);
+    transition: opacity 0.2s ,top 0.2s;
+}
+
+.genres ul
+{
+    display: grid;
+    text-align: start;
+    padding: 10px 20px;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    line-height: 35px;
+    list-style: none;
+}
+
+.Category:hover .genres
+{
+    opacity: 1;
+    pointer-events: all;
+    top: 35px;
+}
+
+.arrow
+{
+    display: flex;
+    width: fit-content;
+    padding: 3px;
+    position: absolute;
+    top: -4px;
+    left: 42.1%;
+    background-color: var(--mainhover2);
+    border: 5px var(--lightcolor2) solid;
+    transform: rotate(45deg);
+    box-shadow: 0 0 10px var(--mainhover);
+}
+
+.genre
+{
+    text-decoration: none;
+    color: var(--lightcolor);
+    transition: color .15s ease-in;
+}
+
+.genre:hover
+{
+    text-decoration: none;
+    color: var(--maincolor);
+}
+
+.sign-up a
+{
+    text-decoration: none;
+    color: var(--maincolor);
+    padding: 5px 20px;
+    border-radius: 50px;
+    border: 1px solid var(--maincolor);
+    font-size: 26px;
+    transition: background-color .4s , box-shadow .4s ease-in-out;
+}
+
+.sign-up a:hover
+{
+   background-color: var(--lightcolor2);
+   box-shadow: 0 0 10px var(--maincolor);
+   color: var(--lightcolor);
+}
+
+
+.alert{
+    padding: 15px 40px ;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: capitalize;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    transition: all .4s ease;
+    z-index: -1;
+    backdrop-filter: blur(10px);
+}
+
+.ShowAlert{
+    top: 100px;
+    opacity: 1;
+}
+
+.goodAlert{
+    background-color: var(--alert-green-trans);
+    border: 2px solid var(--alert-green-solid);
+    color: var(--alert-green-solid);
+}
+
+.badAlert{
+    background-color: var(--alert-red-trans);
+    border: 2px solid var(--alert-red-solid);
+    color: var(--alert-red-solid);
+}

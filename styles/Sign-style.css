@@ -1,0 +1,141 @@
+
+body
+{
+    background: url(assets2/bg2.jpeg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.contaner
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    background-color: rgba(253, 248, 227, 0.4);
+    max-width: 360px;
+    max-height: 570px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px;
+    padding: 20px 40px;
+}
+
+.sign-title
+{
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: start;
+}
+
+.contaner input
+{
+    min-width: 300px;
+    padding: 10px;
+    border-bottom:1px solid rgb(90, 90, 90);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 10px;
+    outline: none;
+    background: transparent;
+    transition: border-bottom .3s;
+    text-align: start;
+}
+
+.contaner input:focus
+{
+    border-bottom:1px solid rgb(0, 0, 0);
+}
+
+.inputs label
+{
+    position: absolute;
+    left: 50px;
+    transition: scale .4s , top .4s;
+    cursor: text;
+    transition: transform .4s;
+}
+
+.inputs input:focus + label,
+.inputs input:valid + label
+{
+    transform: scale(.75) translate3d(-20px,-34px ,0);
+}
+
+.login
+{
+    display: flex;
+    padding: 0 50px;
+    font-size: 14px;
+    text-wrap: wrap;
+    justify-content: center;
+}
+
+
+.contaner button
+{
+    border:1px solid black;
+    border-radius: 40px;
+    padding: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .4s;
+    width: 100%;
+}
+
+.contaner button:hover
+{
+    background-color: var(--lightcolor2);
+    border-color: var(--lightcolor2);
+    box-shadow: 0 0 4px var(--maincolor);
+}
+
+.sub-btn
+{
+    display: flex;
+    justify-content: center;
+}
+
+.sub-btn button
+{
+    text-align: center;
+    font-size: 16px;
+}
+
+.inputs form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contaner form div
+{
+    display: flex;
+    align-items: center;
+}
+
+.sginup-with
+{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.sginup-with button
+{
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.sginup-with button img
+{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
